@@ -1,0 +1,271 @@
+
+/* Base Styles */
+:root {
+    --text-color: #1a1c20;
+    --link-color: #deb887;
+    --background-color: #eeeff1;
+    font-size: 17px; /* Set the base font size */
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; 
+}
+
+
+
+body{
+    margin:5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 3.125rem;
+    top: 0;
+}
+
+nav .left a{
+    color: var(--text-color)
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0.625rem;
+}
+
+nav .right a:hover {
+    color: var(--link-color);
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+/*About Section*/
+
+/* Container to hold everything within the about section */
+#about .about-container-one {
+    display: flex; /* Make it a flex container */
+    justify-content: space-between; /* Distribute space between the child elements */
+    align-items: center; /* Align the items vertically at the center */
+    background-color: white;
+    padding: 0 3.125rem;
+    top: 0;
+    margin-bottom: 2rem; /* Adds space between the about-container and socials */
+}
+
+
+#about .profile-picture {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    margin-top: 6rem;
+    margin-bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    order: 2; /*move image to right*/
+}
+
+#about .profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 10% 10%;
+    transition: transform 0.5s ease;
+}
+
+#about .profile-picture img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Styling for the bio description */
+#about .about-me {
+    flex: 1;/* Allow the bio description to take up available space */
+    margin-right: 20px; /* Adds space between the bio and image */
+    max-width:50%;
+    order: 1;/*move to left*/
+    justify-content: left;
+}
+
+
+
+/* Social Icons Styling */
+.socials {
+    display: flex;
+    justify-content: left; /* Align icons in the center */
+    gap: 15px; /* Add spacing between icons */
+    margin-top: 1rem; /* Space between about-me and socials */
+    order:1;
+}
+
+.social-icon {
+    font-size: 2rem; /* Size of the social icons */
+    color: #333; /* Default icon color */
+    text-decoration: none; /* Remove underline */
+    transition: 0.5s ease; /* Smooth color transition on hover */
+    order:1;
+    
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Color on hover */
+}
+
+
+
+
+
+/* Projects Section */
+
+.scrollable-box {
+    text-align: center;
+
+    max-height: 600px;
+    overflow-y: auto;
+    padding:10px;
+    border: 3px solid #444;
+    border-radius:10px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+
+}
+
+.h2 {
+    margin-bottom:20px;
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    padding:20px;
+    max-width: 1000px;
+    margin:auto;
+}
+.grid-item {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius:8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.grid-item:hover {
+    transform:scale(1.05);
+}
+
+.grid-item img {
+    width:100%;
+    height: 70%;
+    border-radius: 8px;
+}
+
+
+
+
+
+.grid-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.grid-item h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.grid-item p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #494a4a;
+}
+
+.grid-container h3 {
+    grid-column: 1/-1;
+    grid-row: 1;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.new h3{
+    grid-column: span 4;
+    grid-row: 5;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Layout: Stack on smaller screens */
+@media (max-width: 768px) {
+    #about .about-container-one {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center-align the items */
+        text-align: center; /* Center the text */
+    }
+
+    /* Adjust the profile picture size on smaller screens */
+    #about .profile-picture {
+        width: 12rem; /* Smaller profile picture */
+        height: 12rem; /* Smaller profile picture */
+        margin-bottom: 20px; /* Adds space below the image */
+    }
+
+    .about-me {
+        max-width: 90%; /* Bio description takes up more space */
+        margin-right: 0; /* Remove right margin when stacked */
+    }
+
+    .socials {
+        margin-top: 20px; /* Space between bio and socials */
+    }
+}

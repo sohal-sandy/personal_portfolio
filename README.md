@@ -1,4 +1,4 @@
 # personal_portfolio
-My personal portfolio with html,sass, and JavaScript.
+My personal portfolio with html and css only.
 
 

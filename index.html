@@ -3,9 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sandeep Sohal</title>
+
+
+    <!-- PNG favicon -->
+    <link rel="icon" type="personal_portfolio/logo/S.png" href="logo/S.png">
+
+    <!-- WebP favicon -->
+    <link rel="icon" type="personal_portfolio/logo/S.webp" href="logo/S.webp">
+
+    <link rel="stylesheet" href="style.css">
+    <!--for fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--for social icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
 </head>
 <body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sandeep Sohal</div>
+            <ul class="nav-links">
+                <li><a href="#about"> about </a></li>
+                <li><a href="#projects-display"> projects</a></li>
+                <li><a href="#courses-section"> courses </a></li>
+                <li><a href="documents/Sohal_Sandeep_CV.pdf"> resume </a></li>
+                <!--email-->
+                <li><a href="mailto:sandeepsohal.k@gmail.com" class="mail_link"> contact</a></li>
+            </ul>
+
+
+        </nav>
+    </header>
+ 
+
+    <main>
+        
+        <section id="about">
+            <div class="about-container-one">
+
+
+                <!--Profile Picture-->
+                <div class="profile-picture">
+                    <picture>
+                        <!-- WebP image for browsers that support it -->
+                         <source srcset="webpconverts/portfoliopic_1.webp" type="image/webp">
+                         <!-- Default image if no supported formats are available -->
+                          <img src="images/portfoliopic_1.jpg" alt="Sandeep Sohal">
+                    </picture>
+                </div>
+
+
+                <!--Bio Description-->
+
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>Hi! I'm Sandeep, a recent Computer Science graduate from Toronto Metropolitan University (formerly Ryerson University), where I specialized in Machine Learning and Computer Vision. During my academic journey, I developed a strong foundation in AI technologies and data science, focusing on building models that can solve real-world problems.
+
+                        Lately, I've been diving into front-end development and UX/UI design, discovering a new passion for creating intuitive and user-centered web experiences. I'm always excited to learn and tackle new challenges in both the technical and creative aspects of development.</p>
+                </div>
+
+            </div>
+                <!--socials-->
+                <div class="socials">
+                    <!--linkedin-->
+                    <a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <!--github-->
+                    <a href="https://github.com/sohal-sandy" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+
+                </div>
+
+        </section>
+
+
+
+
+         <!--Projects Section-->
+
+         <section id="projects-display">
+            <div class=section-title><h2>Projects</h2></div>
+            <div class="scrollable-box">
+                <div class="grid-container">
+                    <h3> Machine Learning </h3>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/ML-and-DL-Models-for-Fake-News-Detection" target="_blank">
+                            <picture>
+                                <source srcset="webpconverts/fakenewsproj.webp" type="image/webp">
+                                <img src="images/fakenewsproj.png" alt="FakeNewsDetection">
+                            </picture>
+                            <h4>Fake News Detection</h4>
+                            <h5><em>Python, BERT, NLTK</em></h5>
+                            <p>NLP Project for detecting fake news articles. ML models including logistic regression, decision tree and DL models such as MLP and BERT are implemented.</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/Interactive-Platform-for-Detection-of-Skin-Conditions" target="_blank" >
+                            <picture>
+                                <source srcset="webpconverts/skinconditionproj.webp" type="image/webp">
+                                <img src="images/skinconditionproj.png" alt="skin conditions">
+                            </picture>
+                            <h4>Skin Conditions</h4>
+                            <h5><em>Python</em></h5>
+                            <p>Currently working on an end-to-end web application to classify skin conditions using deep learning and machine learning models.</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/Histopathological-Image-Classification" target="_blank" >
+                            <picture>
+                                <source srcset="webpconverts/histclassification_proj.webp" type="image/webp">
+                                <img src="images/histclassification_proj.jpg" alt="Histopathological-Image-Classification">
+                            </picture>
+                            <h4>Histopathological-Image-Classification</h4>
+                            <h5><em>Python, TensorFlow</em></h5>
+                            <p>Histopathological Image Classification with Pre-Trained Deep Learning Models.</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/Automatic-Image-Colorization-with-Deep-Learning" target="_blank" >
+                            <picture>
+                                <source srcset="webpconverts/imagecolorizationproj.webp" type="image/webp">
+                                <img src="images/imagecolorizationproj.jpeg" alt="image colorization">
+                            </picture>
+                            <h4>Image Colorization</h4>
+                            <h5><em>Python, GANs, Autoencoder, VGG-16</em></h5>
+                            <p>This is a reproducibility challenge exploring transferlearning, auto-encoders, and GANs.</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/Salient-Objects" target="_blank" >
+                            <picture>
+                                <source srcset="webpconverts/salientimgdetectionproj.webp" type="image/webp">
+                                <img src="images/salientimgdetectionproj.jpg" alt="Salient-Objects">
+                            </picture>
+                            <h4>Salient-Objects</h4>
+                            <h5><em>Python, MATLAB</em></h5>
+                            <p>This digital image processing project studies salient object detection while handling occlusion. </p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/basic-sql-queries" target="_blank" >
+                            <picture>
+                                <source srcset="images/sqlproj.webp" type="image/webp">
+                                <img src="images/sqlproj.png" alt="sql">
+                            </picture>
+                            <h4>Basic SQL Queries</h4>
+                            <h5><em>SQL</em></h5>
+                            <p>Advanced SQL queries performed on the Chinook Dataset.</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/mongodb_pymongo" target="_blank" >
+                            <picture>
+                                <source srcset="images/mongodbproj.webp" type="image/webp">
+                                <img src="images/mongodbproj.png" alt="mongodb">
+                            </picture>
+                            <h4>MongoDB Project</h4>
+                            <h5><em>mongodb, pymongo</em></h5>
+                            <p>Queries performed with mongodb and pymongo.</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/ApacheSparkProj" target="_blank" >
+                            <picture>
+                                <source srcset="images/sparkproj.webp" type="image/webp">
+                                <img src="images/sparkproj.png" alt="apache-spark">
+                            </picture>
+                            <h4>Apache Spark Project</h4>
+                            <h5><em>pyspark, databricks</em></h5>
+                            <p>The databricks platform used to study data with pyspark library. </p>
+                        </a>
+                    </div>
+                    <div class="software-projects">
+                        <h3>Software and Design</h3>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://github.com/sohal-sandy/Interactive-Platform-for-Detection-of-Skin-Conditions" target="_blank" >
+                            <picture>
+                                <source srcset="webpconverts/skinconditionproj.webp" type="image/webp">
+                                <img src="images/skinconditionproj.png" alt="skin conditions">
+                            </picture>
+                            <h4>Skin Condition Wireframe</h4>
+                            <h5><em>figma</em></h5>
+                            <p>A wireframe for the skin conditions web application is created with figma.</p>
+                        </a>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Courses -->
+<section id="courses-section">
+    <div class='course-head'><h2>Courses</h2></div>
+    <!-- Container for each university -->
+     <div class="university-row">
+        <div class="university-logo">
+            <picture>
+                <source srcset="images/University Logos/webp/tmu.webp" type="image/webp">
+                <img src="images/University Logos/tmu.png" alt="TMU logo">
+            </picture>
+            <picture>
+                <source srcset="images/University Logos/webp/trentu.webp" type="image/webp">
+                <img src="images/University Logos/trentu.png" alt="Trent Logo">
+            </picture>
+            <!--<picture>
+                <source srcset="images/University Logos/webp/uoft.webp" type="image/webp">
+                <img src="images/University Logos/uoft.jpeg" alt="UofT Logo">
+            </picture>-->
+        </div>
+        
+        <!-- Right Column - Course Lists -->
+         <div class="course-lists">
+            <div class="course-item">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">CP8307 - Computer Vision</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">CP8321 - Deep Learning</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">CP8207 - Digital Image Processing</a></li>
+                    <li><a href="courses/EE8209.pdf">EE8209 - Intelligent Systems</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">CP8305 - Knowledge Discovery</a></li>
+                    <li><a href="https://www.cs.ryerson.ca/~bruce/803/8318CMF.pdf">CP8318 - Machine Learning</a></li>
+                    <li><a href="courses/EE8204.pdf">EE8204 - Neural Networks</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">CP8210 - Topics in Data Science</a></li>
+                </ul>
+            </div>
+            <div class="course-item">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">COIS-3400H - Database Management Systems</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">COIS-3850H - Fundamentals of Project Management</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">COIS-3560H - Human Computer Interaction</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">ADMN-2200H - Intro to Stats for Economics and Management</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">ADMN-2250H - Math for Economics and Management</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">COIS-2830H - Multimedia and Design</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">COIS-3030H - Software Specifications and Development</a></li>
+                    <li><a href="https://www.linkedin.com/in/sandeep-sohal-a58404137/details/courses/">COIS-2620H - Systems Analysis and Design</a></li>
+                </ul>
+            </div>
+            <div class="course-item">
+                <ul>
+                    <li><a href="courses/BigData.pdf">SCS-3252 - Big Data Management Systems and Tools</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+
+
+
+<footer class="footer">
+    <p>© <span id="copyright-year"></span> Sandeep. All Rights Reserved.</p>
+</footer>
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".hamburger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuButton.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+    });
+});
+
+</script>
     
+
+
+   
+
 </body>
 </html>
