@@ -23,6 +23,8 @@
 *::after {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -35,15 +37,15 @@ html {
 
 
 body{
+    -webkit-text-size-adjust: 100%;
     font-family: var(--font-family);
     font-size: var(--font-size-base);
     color: var(--text-color);
     background-color: var(--background-color);
-    margin: 5%;
-    padding: 0 3.125rem;
+    width:100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 1.3rem 10%;
 }
 
 
@@ -73,93 +75,64 @@ a:hover {
 }
 
 
-/* Layout Utilities */
-.container {
-    max-width: 1200px;
-    margin: 0auto;
-    padding: var(--spacing-unit);
-}
 
-.flex {
-    display: flex;
-}
 
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.space-between {
+
+
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    padding: 1.3rem 10%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(50px);
+    display:flex;
     justify-content: space-between;
-}
-
-.space-around {
-    justify-content: space-around;
-}
-
-.align-center {
     align-items: center;
-}
+    z-index: 100;
 
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
 }
 
 
-
-
-/* Hamburger Menu */
-
-
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Pushes items to opposite sides */
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #fff; /* Adjust as needed */
-    width: 1200px;
-    margin: 0 auto; /* Centers the navbar */
+label.logo {
+    font-size: 35px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    line-height: 80px;
+    justify-content: flex-start;
+    padding: 1.5rem 1.5%;
     
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bolder;
+.nav-links{
+    float: right;
     
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
     list-style: none;
+    overflow: hidden;
+}
+
+#check:checked~.nav-links{
+
+    font-size: 20px;
+
+
+    
 }
 
 .nav-links li {
-    display: inline;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
 }
 
 .nav-links a {
     font-weight: var(--font-weight-semibold);
     font-size: 1rem;
-    margin: 0 0.625rem;
     text-decoration: none;
-    padding: 10px;
+    text-transform: lowercase;
     
 }
 
@@ -168,10 +141,111 @@ a:hover {
 .nav-links a:hover {
     color: var(--link-color);
     transition: color 0.3s ease-in-out;
+    background: none;
 }
 
 
+#check{
+    display:none;
+}
 
+.checkbtn{
+    font-size: 30px;
+    color: var(--text-color);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    background: white;
+
+}
+
+#check{
+    display:none;
+
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size:30px;
+        
+
+    }
+    .nav-links li a {
+        
+
+    }
+}
+
+
+@media (max-width: 858px){
+    label.logo{
+        font-size:30px;
+        
+        
+
+    }
+    .checkbtn{
+        display:block;
+        background: white;
+        left:0;
+    }
+
+    #check:checked~.checkbtn #menu-icon{
+        display: none;
+        left:0;
+
+    }
+
+    .checkbtn #close-icon{
+        display:none;
+        left:0;
+
+    }
+
+    #check:checked~.checkbtn #close-icon{
+        display: block;
+        
+    }
+
+    .nav-links{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        top:80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+
+    }
+    .nav-links li{
+        display:block;
+        margin: 50px 0px;
+        line-height: 30px;
+        gap: 5rem;
+
+    }
+    .nav-links li a{
+        display:block;
+        font-size: 22px;
+        margin: auto;
+        text-align: center;
+        gap: 5rem;
+
+    }
+    a:hover, a.active{
+        background:none;
+        transition: .5s;
+
+    }
+    #check:checked ~ .nav-links{
+        left:0;
+
+    }
+}
 
 
 
@@ -195,7 +269,7 @@ a:hover {
     justify-content: space-between; /* Distribute space between the child elements */
     align-items: center; /* Align the items vertically at the center */
     background-color: white;
-    padding: var(--spacing-unit);
+    
     top: 0;
     margin-bottom: 2rem; /* Adds space between the about-container and socials */
 }
@@ -230,7 +304,7 @@ a:hover {
 #about .about-me {
     flex: 1;/* Allow the bio description to take up available space */
     margin-right: 20px; /* Adds space between the bio and image */
-    max-width:50%;
+    max-width:100%;
     order: 1;/*move to left*/
     justify-content: left;
     margin-top: 2rem;
@@ -240,6 +314,8 @@ a:hover {
 #about .about-me p{
     margin-block: var(--spacing-unit);
     font-weight: var(--font-weight-normal);
+    text-align: left;
+
 }
 
 
@@ -459,6 +535,52 @@ a:hover {
 
 
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* University Row - Stack logo and course list vertically */
+    .university-row {
+        flex-direction: row; /* Stack items vertically */
+        gap: 50px; /* Space between logo and course list */
+    }
+
+    /* Reduce the size of the university logos for small screens */
+    .university-logo img {
+        width: 80px; /* Smaller logo size */
+    }
+
+    /* Adjust course list font size and spacing */
+    .course-item ul li a {
+        font-size: 1rem; /* Increase font size for readability */
+        margin-bottom: 8px; /* Reduce space between courses */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjust for very small screens (mobile phones) */
+    .course-head h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 1.2rem; /* Smaller title font */
+    }
+
+    .courses-grid {
+        gap: 5px; /* Reduce gap between logos and courses */
+    }
+
+    .university-logo {
+        gap: 20%; /* Reduce gap between logos */
+    }
+
+    .course-lists {
+        gap: 15px; /* Reduce space between each course */
+    }
+
+    .course-item ul li a {
+        font-size: 0.8rem; /* Further reduce font size for mobile */
+    }
+}
+
+
 
 /*footer*/
 
@@ -512,19 +634,15 @@ a:hover {
         margin-right: 0;
     }
 
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    .header{
+        max-width: 100%;
+        margin-right: 0;
     }
 
-    .nav-links {
-        flex-direction: row;
-        gap: 0px;
-        margin-top: 1rem;
-    }
+    
 
+
+    
 
 
 
@@ -548,17 +666,19 @@ a:hover {
     }
 
     .about-me {
-        max-width: 90%;
+        max-width: 100%;
         margin-right: 0;
+    }
+
+    .header{
+        max-width: fit-content;
     }
 
     .socials {
         margin-top: 20px;
     }
 
-    nav {
-        padding: 1rem;
-    }
+    
 
 
     .footer {

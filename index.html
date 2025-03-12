@@ -24,9 +24,14 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">Sandeep Sohal</div>
+            <input type = "checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars" id="menu-icon"></i>
+                <i class="fa-solid fa-x" id="close-icon"></i>
+            </label>
+            <label class="logo">Sandeep Sohal</label>
             <ul class="nav-links">
-                <li><a href="#about"> about </a></li>
+                <li><a href="#about">about me</a></li>
                 <li><a href="#projects-display"> projects</a></li>
                 <li><a href="#courses-section"> courses </a></li>
                 <li><a href="documents/Sohal_Sandeep_CV.pdf"> resume </a></li>
@@ -288,12 +293,21 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector(".hamburger-menu");
-    const navLinks = document.querySelector(".nav-links");
+const startYear = 2024;
+    const currentYear = new Date().getFullYear();
+    document.getElementById("copyright-year").textContent = 
+        currentYear > startYear ? `${startYear} - ${currentYear}` : startYear;
 
-    menuButton.addEventListener("click", function () {
-        navLinks.classList.toggle("show");
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const checkBox = document.getElementById("check");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            // Uncheck the checkbox to close the nav menu
+            checkBox.checked = false;
+        });
     });
 });
 
